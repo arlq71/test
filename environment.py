@@ -43,11 +43,11 @@ class Env(tk.Tk):
 
     def load_images(self):
         rectangle = PhotoImage(
-            Image.open("rectangle.png").resize((65, 65)))
+            Image.open("img/rectangle.png").resize((65, 65)))
         triangle = PhotoImage(
-            Image.open("triangle.png").resize((65, 65)))
+            Image.open("img/triangle.png").resize((65, 65)))
         circle = PhotoImage(
-            Image.open("circle.png").resize((65, 65)))
+            Image.open("img/circle.png").resize((65, 65)))
 
         return rectangle, triangle, circle
 
@@ -120,7 +120,6 @@ class Env(tk.Tk):
         self.canvas.move(self.rectangle, base_action[0], base_action[1])
         self.canvas.tag_raise(self.rectangle)
         next_state = self.canvas.coords(self.rectangle)
-
         if next_state == self.canvas.coords(self.circle):
             reward = 100
             done = True
