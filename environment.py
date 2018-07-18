@@ -43,7 +43,11 @@ class Env(tk.Tk):
 
     def load_images(self):
         rectangle = PhotoImage(
+<<<<<<< HEAD
+            Image.open("img/ectangle.png").resize((65, 65)))
+=======
             Image.open("img/rectangle.png").resize((65, 65)))
+>>>>>>> 424b703a6b7528364b1ac58ba9b25d9c4dd18156
         triangle = PhotoImage(
             Image.open("img/triangle.png").resize((65, 65)))
         circle = PhotoImage(
